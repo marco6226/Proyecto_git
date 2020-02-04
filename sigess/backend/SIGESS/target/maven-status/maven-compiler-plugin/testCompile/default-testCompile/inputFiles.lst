@@ -1,0 +1,6 @@
+/mnt/DATA/dev/sigess/backend/SIGESS/src/test/java/test/co/sigess/facade/emp/TestUsuarioFacade.java
+/mnt/DATA/dev/sigess/backend/SIGESS/src/test/java/test/co/sigess/restful/security/TestUtilSecurity.java
+/mnt/DATA/dev/sigess/backend/SIGESS/src/test/java/test/co/sigess/facade/core/TestEmailFacade.java
+/mnt/DATA/dev/sigess/backend/SIGESS/src/test/java/test/co/sigess/restful/emp/TestAuthenticationREST.java
+/mnt/DATA/dev/sigess/backend/SIGESS/src/test/java/test/co/sigess/util/TestUtil.java
+/mnt/DATA/dev/sigess/backend/SIGESS/src/test/java/test/co/sigess/restful/security/TestFileEncryption.java
