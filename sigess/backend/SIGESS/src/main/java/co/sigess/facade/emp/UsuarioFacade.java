@@ -84,7 +84,7 @@ public class UsuarioFacade extends AbstractFacade<Usuario> {
 
     public Usuario authenticate(String email, String passw, String mfaCod) throws Exception {
         Query q = this.em.createNativeQuery("SELECT id, email, estado, codigo, avatar, icon, fecha_acepta_terminos::TIMESTAMP, ip_valida, mfa, codigo_mfa, numero_movil "
-                + "FROM emp.verificar_login(?1, ?2, ?3, ?4) "
+                + "FROM emp.verificar_login(?1, ?2, ?3,?4) "
                 + "AS (id INTEGER, email TEXT, estado TEXT, password TEXT, expira_password TIMESTAMP, codigo INTEGER, avatar TEXT, icon TEXT, fecha_acepta_terminos TIMESTAMP, ip_valida BOOLEAN, mfa BOOLEAN, codigo_mfa VARCHAR(10), numero_movil VARCHAR(18))");
         q.setParameter(1, email);
         q.setParameter(2, UtilSecurity.createEmailPasswordHash(email, passw));

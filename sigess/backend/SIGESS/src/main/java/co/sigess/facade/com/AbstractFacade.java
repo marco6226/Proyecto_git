@@ -34,6 +34,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.persistence.criteria.Selection;
 
+
 /**
  *
  * @author fmoreno
@@ -110,7 +111,7 @@ public abstract class AbstractFacade<T> {
         }
 
         if (queryByField) {
-            List mapList = new ArrayList<>();
+            List mapList = new ArrayList<>();           
             query.getResultList().forEach(
                     resultado -> {
                         try {

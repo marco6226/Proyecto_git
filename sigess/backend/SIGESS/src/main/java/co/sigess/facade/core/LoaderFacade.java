@@ -8,6 +8,7 @@ package co.sigess.facade.core;
 import co.sigess.entities.com.ApiVersion;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
@@ -20,6 +21,7 @@ import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.ws.rs.Path;
 
 /**
  *
@@ -50,11 +52,13 @@ public class LoaderFacade {
         getSmsProperties();
     }
 
-    public String getPlantillaMail() {
+   public String getPlantillaMail() {
         if (this.plantillaMail == null) {
             try {
                 String ruta = getClass().getResource(Recursos.PLANTILLA_MAIL.getRuta()).getPath();
-                this.plantillaMail = new String(Files.readAllBytes(Paths.get(ruta)));
+                int y = ruta.length(); 
+                String x = ruta.substring(1,y);
+                this.plantillaMail = new String(Files.readAllBytes(Paths.get(x)));               
             } catch (IOException ex) {
                 Logger.getLogger(LoaderFacade.class.getName()).log(Level.SEVERE, null, ex);
                 throw new IllegalArgumentException("No se ha podido inicializar correctamente la plantilla PLANTILLA_MAIL");
@@ -67,7 +71,9 @@ public class LoaderFacade {
         if (this.plantillaMailRecPasswd == null) {
             try {
                 String ruta = getClass().getResource(Recursos.PLANTILLA_MAIL_REC_PASSW.getRuta()).getPath();
-                this.plantillaMailRecPasswd = new String(Files.readAllBytes(Paths.get(ruta)));
+                int y = ruta.length(); 
+                String x = ruta.substring(1,y);
+                this.plantillaMailRecPasswd = new String(Files.readAllBytes(Paths.get(x)));
             } catch (IOException ex) {
                 Logger.getLogger(LoaderFacade.class.getName()).log(Level.SEVERE, null, ex);
                 throw new IllegalArgumentException("No se ha podido inicializar correctamente la plantilla PLANTILLA_MAIL_REC_PASSW");
@@ -80,7 +86,9 @@ public class LoaderFacade {
         if (this.plantillaMailCambioPasswd == null) {
             try {
                 String ruta = getClass().getResource(Recursos.PLANTILLA_MAIL_CAMBIO_PASSW.getRuta()).getPath();
-                this.plantillaMailCambioPasswd = new String(Files.readAllBytes(Paths.get(ruta)));
+                int y = ruta.length(); 
+                String x = ruta.substring(1,y);
+                this.plantillaMailCambioPasswd = new String(Files.readAllBytes(Paths.get(x)));
             } catch (IOException ex) {
                 Logger.getLogger(LoaderFacade.class.getName()).log(Level.SEVERE, null, ex);
                 throw new IllegalArgumentException("No se ha podido inicializar correctamente la plantilla PLANTILLA_MAIL_CAMBIO_PASSW");
@@ -93,7 +101,9 @@ public class LoaderFacade {
         if (this.plantillaMailCreacionUsuario == null) {
             try {
                 String ruta = getClass().getResource(Recursos.PLANTILLA_MAIL_CREACION_USUARIO.getRuta()).getPath();
-                this.plantillaMailCreacionUsuario = new String(Files.readAllBytes(Paths.get(ruta)));
+                 int y = ruta.length(); 
+                String x = ruta.substring(1,y);
+                this.plantillaMailCreacionUsuario = new String(Files.readAllBytes(Paths.get(x)));
             } catch (IOException ex) {
                 Logger.getLogger(LoaderFacade.class.getName()).log(Level.SEVERE, null, ex);
                 throw new IllegalArgumentException("No se ha podido inicializar correctamente la plantilla PLANTILLA_MAIL_CREACION_USUARIO");

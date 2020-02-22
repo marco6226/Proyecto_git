@@ -1,4 +1,3 @@
-
 //$header-color: linear-gradient(90deg, #002284, #0275d8);
 $primary-color: #3ba2dc;
 $secondary-color: #46B9FC;
@@ -10,149 +9,155 @@ $menu-background-color: #fff;
 $menu-open-width: 250px;
 $menu-close-width: 65px;
 $header-height: 50px;
-
-#layout{
-	width: 100%;
-	height: 100vh;
+#layout {
+    width: 100%;
+    height: 100vh;
 }
+
 
 /* header classes */
-h1{
-	color: #fff;
+
+h1 {
+    color: #fff;
 }
 
-.header{
-	padding: 10px;
-	background: $header-color;	
-	height: $header-height;
-	position: fixed;
-	right: 0px;
-	z-index: 10;
-	box-sizing: border-box;
-	transition: $width-transition;
-	box-shadow: 1px 2px 3px #aaa;
+.header {
+    padding: 10px;
+    background: $header-color;
+    height: $header-height;
+    position: fixed;
+    right: 0px;
+    z-index: 10;
+    box-sizing: border-box;
+    transition: $width-transition;
+    box-shadow: 1px 2px 3px #aaa;
 }
 
-.header h1{
-	margin-left: 55px;
+.header h1 {
+    margin-left: 55px;
 }
 
-.header-partial{
-	width: calc(100% - #{$menu-open-width});
+.header-partial {
+    width: calc(100% - #{$menu-open-width});
 }
 
-.header-full{
-	width: calc(100% - #{$menu-close-width});
+.header-full {
+    width: calc(100% - #{$menu-close-width});
 }
 
-.header-menu-invisible h1{
-	margin-left: 10px !important;
+.header-menu-invisible h1 {
+    margin-left: 10px !important;
 }
 
-.header-menu-invisible{
-	width: 100% ;
+.header-menu-invisible {
+    width: 100%;
 }
 
-.empresa-selector{
-	position: fixed;
-	top: 13px;
-	right: 20px;
+.empresa-selector {
+    position: fixed;
+    top: 13px;
+    right: 20px;
 }
+
 
 /* content classes */
 
-.content{
-	position: absolute;
-	top: $header-height;
-	right: 0px;
-	transition: $width-transition, right 0.2s;	
-	padding: 15px;
-	box-sizing: border-box;
+.content {
+    position: absolute;
+    top: $header-height;
+    right: 0px;
+    transition: $width-transition, right 0.2s;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
-.content-partial{
-	width: calc(100% - #{$menu-open-width});
+.content-partial {
+    width: calc(100% - #{$menu-open-width});
 }
 
-.content-full{
-	width: calc(100% - #{$menu-close-width});
+.content-full {
+    width: calc(100% - #{$menu-close-width});
 }
+
 
 /* menu classes */
 
-.menu{
-	background-color: #fff;
-  height: 100vh;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-	overflow: hidden;
-  z-index: 0;
-  transition: width 0.3s;
-  box-shadow: 2px 2px 5px #ccc;
+.menu {
+    background-color: #fff;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    z-index: 0;
+    transition: width 0.3s;
+    box-shadow: 2px 2px 5px #ccc;
 }
 
-.menu-close{
-	width: $menu-close-width;
+.menu-close {
+    width: $menu-close-width;
 }
 
-.menu-open{
-	width: $menu-open-width;
-	z-index: 5;
+.menu-open {
+    width: $menu-open-width;
+    z-index: 5;
 }
 
 
 /* Button toggle menu classes */
 
-.btn-toggle-menu-open{
-	left: $menu-open-width;
-}
-.btn-toggle-menu-close{
-	left: $menu-close-width;
+.btn-toggle-menu-open {
+    left: $menu-open-width;
 }
 
-.btn-disabled{
-	background-color: #ccc !important;
+.btn-toggle-menu-close {
+    left: $menu-close-width;
 }
 
-.btn-invisible{
-	display: none;
+.btn-disabled {
+    background-color: #ccc !important;
 }
 
-.btn-toggle-menu{
-	position: fixed;
-	top: 0px;
-	height: $header-height;
-	width: $header-height;
+.btn-invisible {
+    display: none;
+}
 
-	margin-right: 10px;
-	background-color: transparent;
-	border: none;
-	color: #fff;
-	//font-size: 32px;
-	z-index: 11;
-	
-	transition: left $transition-duration;
+.btn-toggle-menu {
+    position: fixed;
+    top: 0px;
+    height: $header-height;
+    width: $header-height;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    //font-size: 32px;
+    z-index: 11;
+    transition: left $transition-duration;
 }
-.btn-toggle-menu:hover{
-	background-color: $primary-color - #222222;
+
+.btn-toggle-menu:hover {
+    background-color: $primary-color #222222;
 }
-#avatar{
-	position: relative;
-	top: 0px;
-	left: 50px;
-  right: 0px;
-  width: 35px;
-	height: 35px;
-	color: #fff;
-	display: flex;
+
+#avatar {
+    position: relative;
+    top: 0px;
+    left: 50px;
+    right: 0px;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    display: flex;
 }
-#avatar-content i{
-	float: left;
-	font-size: 32px;
+
+#avatar-content i {
+    float: left;
+    font-size: 32px;
 }
-#avatar-content:hover{
-	cursor:pointer;
+
+#avatar-content:hover {
+    cursor: pointer;
 }
 
 
@@ -206,6 +211,3 @@ h1{
 	
 }
 */
-
-
-
