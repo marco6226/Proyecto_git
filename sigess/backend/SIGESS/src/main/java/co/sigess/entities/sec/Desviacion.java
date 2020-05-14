@@ -38,6 +38,9 @@ public class Desviacion implements Serializable {
     @Column(name = "concepto")
     private String concepto;
     
+    @Column(name = "fechaReporte")
+    private String fechaReporte;
+    
     @Column(name = "aspecto_causante")
     private String aspectoCausante;
     
@@ -119,6 +122,20 @@ public class Desviacion implements Serializable {
 
     public void setArea(Area area) {
         this.area = area;
+    }
+
+    /**
+     * @return the fechaReporte
+     */
+    public String getFechaReporte() {
+        return fechaReporte;
+    }
+
+    /**
+     * @param fechareporte the fechareporte to set
+     */
+    public void setFechaReporte(String fechaReporte) {
+        this.fechaReporte = fechaReporte;
     }
     
 }

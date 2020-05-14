@@ -38,6 +38,9 @@ public class Desviacion implements Serializable {
     @Column(name = &quot;concepto&quot;)
     private String concepto;
     
+    @Column(name = &quot;fechaReporte&quot;)
+    private String fechaReporte;
+    
     @Column(name = &quot;aspecto_causante&quot;)
     private String aspectoCausante;
     
@@ -54,72 +57,86 @@ public class Desviacion implements Serializable {
     @Column(name = &quot;analisis_id&quot;)
     private Integer analisisId;
     
-<span class="nc" id="L57">    public Desviacion() {</span>
-<span class="nc" id="L58">    }</span>
+<span class="nc" id="L60">    public Desviacion() {</span>
+<span class="nc" id="L61">    }</span>
 
     public String getHashId() {
-<span class="nc" id="L61">        return hashId;</span>
+<span class="nc" id="L64">        return hashId;</span>
     }
 
     public void setHashId(String hashId) {
-<span class="nc" id="L65">        this.hashId = hashId;</span>
-<span class="nc" id="L66">    }</span>
+<span class="nc" id="L68">        this.hashId = hashId;</span>
+<span class="nc" id="L69">    }</span>
 
     public String getModulo() {
-<span class="nc" id="L69">        return modulo;</span>
+<span class="nc" id="L72">        return modulo;</span>
     }
 
     public void setModulo(String modulo) {
-<span class="nc" id="L73">        this.modulo = modulo;</span>
-<span class="nc" id="L74">    }</span>
+<span class="nc" id="L76">        this.modulo = modulo;</span>
+<span class="nc" id="L77">    }</span>
 
     public String getConcepto() {
-<span class="nc" id="L77">        return concepto;</span>
+<span class="nc" id="L80">        return concepto;</span>
     }
 
     public void setConcepto(String concepto) {
-<span class="nc" id="L81">        this.concepto = concepto;</span>
-<span class="nc" id="L82">    }</span>
+<span class="nc" id="L84">        this.concepto = concepto;</span>
+<span class="nc" id="L85">    }</span>
 
     public String getAspectoCausante() {
-<span class="nc" id="L85">        return aspectoCausante;</span>
+<span class="nc" id="L88">        return aspectoCausante;</span>
     }
 
     public void setAspectoCausante(String aspectoCausante) {
-<span class="nc" id="L89">        this.aspectoCausante = aspectoCausante;</span>
-<span class="nc" id="L90">    }</span>
+<span class="nc" id="L92">        this.aspectoCausante = aspectoCausante;</span>
+<span class="nc" id="L93">    }</span>
 
     public String getNivelRiesgo() {
-<span class="nc" id="L93">        return nivelRiesgo;</span>
+<span class="nc" id="L96">        return nivelRiesgo;</span>
     }
 
     public void setNivelRiesgo(String nivelRiesgo) {
-<span class="nc" id="L97">        this.nivelRiesgo = nivelRiesgo;</span>
-<span class="nc" id="L98">    }</span>
+<span class="nc" id="L100">        this.nivelRiesgo = nivelRiesgo;</span>
+<span class="nc" id="L101">    }</span>
 
     public Integer getEmpresaId() {
-<span class="nc" id="L101">        return empresaId;</span>
+<span class="nc" id="L104">        return empresaId;</span>
     }
 
     public void setEmpresaId(Integer empresaId) {
-<span class="nc" id="L105">        this.empresaId = empresaId;</span>
-<span class="nc" id="L106">    }</span>
+<span class="nc" id="L108">        this.empresaId = empresaId;</span>
+<span class="nc" id="L109">    }</span>
 
     public Integer getAnalisisId() {
-<span class="nc" id="L109">        return analisisId;</span>
+<span class="nc" id="L112">        return analisisId;</span>
     }
 
     public void setAnalisisId(Integer analisisId) {
-<span class="nc" id="L113">        this.analisisId = analisisId;</span>
-<span class="nc" id="L114">    }</span>
+<span class="nc" id="L116">        this.analisisId = analisisId;</span>
+<span class="nc" id="L117">    }</span>
 
     public Area getArea() {
-<span class="nc" id="L117">        return area;</span>
+<span class="nc" id="L120">        return area;</span>
     }
 
     public void setArea(Area area) {
-<span class="nc" id="L121">        this.area = area;</span>
-<span class="nc" id="L122">    }</span>
+<span class="nc" id="L124">        this.area = area;</span>
+<span class="nc" id="L125">    }</span>
+
+    /**
+     * @return the fechaReporte
+     */
+    public String getFechaReporte() {
+<span class="nc" id="L131">        return fechaReporte;</span>
+    }
+
+    /**
+     * @param fechareporte the fechareporte to set
+     */
+    public void setFechaReporte(String fechaReporte) {
+<span class="nc" id="L138">        this.fechaReporte = fechaReporte;</span>
+<span class="nc" id="L139">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
