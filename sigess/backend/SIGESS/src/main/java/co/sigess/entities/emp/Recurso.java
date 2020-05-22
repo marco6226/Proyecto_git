@@ -59,6 +59,10 @@ public class Recurso implements Serializable {
     @Column(name = "validacion_area")
     private Boolean validacionArea;
     
+    
+    @Column(name = "validacion_perfil")
+    private Boolean validacionPerfil;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 255)
@@ -126,12 +130,19 @@ public class Recurso implements Serializable {
         this.tipo = tipo;
     }
 
-    public Boolean getValidacionArea() {
+        public Boolean getValidacionArea() {
         return validacionArea;
     }
 
     public void setValidacionArea(Boolean validacionArea) {
         this.validacionArea = validacionArea;
+    } 
+        public Boolean getValidacionPerfil() {
+        return validacionPerfil;
+    }
+
+    public void setValidacionPerfil(Boolean validacionPerfil) {
+        this.validacionPerfil = validacionPerfil;
     }
 
     @Override
